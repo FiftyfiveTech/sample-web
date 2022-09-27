@@ -34,7 +34,7 @@ npm i or npm install
 node start
 ```
 
-##### Package manager
+## Package manager - Yarn
 This project is using Yarn as package manager, if you do not have this installed on your machine please start by looking at the [Yarn docuentation and tutorials](https://classic.yarnpkg.com/en/docs). After installing the package manager the following commands will be availible for you:
 - `yarn install` - Installing dev dependencies unless `mode=production`
 - `yarn start` - Starting the project
@@ -42,21 +42,17 @@ This project is using Yarn as package manager, if you do not have this installed
 
 If you seem to still have issues with these commands, try running `yarn cache clean` and do `yarn install`
 
-##### Linting
+### Linting
 Project is using ESLint to make sure that we keep same coding style in the project. Currently the ruleset is defined in `.eslintrc.json`.
 
-##### Webpack and Babel
+### Webpack and Babel
 Webpack is a module bundler which packs all modules with dependencies – js, styles, images, etc. into static assets .js, .css, .jpg , .png, etc. Webpack comes with presets which help for compilation into the required form. For example, react preset that helps to get the final output in react form, es2015 or env preset that helps to compile the code in ES5 or 6 or 7, etc. We have used babel 6 in the project setup. In case you want to switch to babel7, install the required packages of babel using @babel/babel-package-name.
 
-<img src="/src/assets/readmeImages/webpack-babel.png" alt="Webpack Plugins" title="Webpack Plugins" style="margin: 5% 20%">
 
-
-
-### Project structure
+## Project structure
 This project is structured in the following way:
-- Clean Architecture
 
-<img src="/src/assets/readmeImages/new_arch.png" alt="Clean Architecture" title="Clean Architecture With ReactJS" style="margin: 5% 20%">
+- Clean Architecture
 
 ```
 ├── .git
@@ -156,6 +152,7 @@ This project is structured in the following way:
 └── webpack.config.js
         [File structure is recursive]
 ```
+
 **src/index.ts** - Here we added the logic to render root component on particular html element.
 
 **index.ts** - You should always include `index` file in every folder. When you have a lot of components you need to export from a given folder and you would like to destructure in the files you're importing them into. You don't have to follow this at all, but is still best practice to do it this way; it can be easier when exporting a large amount of files such as from a reducer in Redux or a utility folder with a large amount of smaller components like a `<Button>` or `<Input>`, and it is easier to read for other users if everything coalesces into a single index file rather than several different files.
@@ -170,7 +167,6 @@ This project is structured in the following way:
 
 **core/reducers** - It contains the reducers in folders form e.g. `core/reducers/signup`. There will be reducer files e.g. `core/reducers/Home/signup.reducers.js`, each file will have default export of slice/reducer and will have various reducer functions to update the redux state. We have used reduxjs/toolkit so the way of writing reducers is different here.
 
-
 **core/store** - Where you can configure the redux store in a common place, also combine reducers.
 
 **services** - There are as many services as there are concerns in the app, so it is easy to find where the stuff I need is. You need to create Page name or component name folder and file before adding APIs.
@@ -181,8 +177,9 @@ This project is structured in the following way:
 
 **pages** - There is a index.js file where we have already defined the route component. Now when you create a new page you have to add the route in the routes group. 
 
-##### How should a Page component look
+### How should a Page component look
 A React component will look the same if it is a "Page" or just a heading somewhere, the only difference there is placement of it. These rules or guidelines should therefore be followed regardless to make it easier for new developers to join the project. 
+
 ```
 ComponentName/PageName
 │   index.ts
