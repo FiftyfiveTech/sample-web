@@ -20,6 +20,7 @@
 - [Web pack](https://webpack.js.org/) - bundle your JavaScript applications.
 - [Apollo Client](https://www.apollographql.com/docs/react/) - Manage both local and remote data with GraphQL.
 - [React hook form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.
+- [Redux Toolkit](https://redux-toolkit.js.org/) - Used to implement Redux in the project
 
 
 ## Installation
@@ -49,7 +50,12 @@ Project is using ESLint to make sure that we keep same coding style in the proje
 Webpack is a module bundler which packs all modules with dependencies – js, styles, images, etc. into static assets .js, .css, .jpg , .png, etc. Webpack comes with presets which help for compilation into the required form. For example, react preset that helps to get the final output in react form, es2015 or env preset that helps to compile the code in ES5 or 6 or 7, etc. We have used babel 6 in the project setup. In case you want to switch to babel7, install the required packages of babel using @babel/babel-package-name.
 
 
-## Project structure
+## Archirecture and Project structure
+
+This project follows the `Clean Architecture`, and hence have focused the structuring of the project on the standard practices that are recommended by the `Clean Architecture`. You will find we have focused on `de-coupling` and `reusability` of the code
+![CleanArch](https://user-images.githubusercontent.com/21957552/192456113-52745765-e880-4574-ab40-9b1c3c97d6bb.png)
+
+
 This project is structured in the following way:
 
 ```
@@ -214,6 +220,8 @@ If you want to call API(If API is not added then you need to add the api in serv
 You have to add three actions in redux while using apis to handle reject and response in best way.
 In this app we are not using mapDispatchToProps and mapStateToProps instead we are using useDispatch and useSelector hooks.
 
+
+<img src="https://user-images.githubusercontent.com/21957552/192454831-321cd250-585c-4dc5-a902-ba19a905fd74.png" width="50%">
 
 ## License
 
