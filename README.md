@@ -34,7 +34,7 @@ npm i or npm install
 node start
 ```
 
-## Package manager - Yarn
+### Package manager - Yarn
 This project is using Yarn as package manager, if you do not have this installed on your machine please start by looking at the [Yarn docuentation and tutorials](https://classic.yarnpkg.com/en/docs). After installing the package manager the following commands will be availible for you:
 - `yarn install` - Installing dev dependencies unless `mode=production`
 - `yarn start` - Starting the project
@@ -51,8 +51,6 @@ Webpack is a module bundler which packs all modules with dependencies – js, st
 
 ## Project structure
 This project is structured in the following way:
-
-- Clean Architecture
 
 ```
 ├── .git
@@ -177,7 +175,7 @@ This project is structured in the following way:
 
 **pages** - There is a index.js file where we have already defined the route component. Now when you create a new page you have to add the route in the routes group. 
 
-### How should a Page component look
+## How should a Page component look
 A React component will look the same if it is a "Page" or just a heading somewhere, the only difference there is placement of it. These rules or guidelines should therefore be followed regardless to make it easier for new developers to join the project. 
 
 ```
@@ -215,11 +213,6 @@ If you want to add new state in the redux store then you have to create reducers
 If you want to call API(If API is not added then you need to add the api in services folder with specific page name folder) then you have to use it in actions.
 You have to add three actions in redux while using apis to handle reject and response in best way.
 In this app we are not using mapDispatchToProps and mapStateToProps instead we are using useDispatch and useSelector hooks.
-
-<img src="/src/assets/readmeImages/react_app_flow.png" alt="React App Flow" title="React App Flow">
-
-<img src="/src/assets/readmeImages/redux-saga.png" alt="Redux Saga" title="Redux Saga">
-
 
 
 ## License
